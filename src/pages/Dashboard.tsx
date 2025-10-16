@@ -37,7 +37,7 @@ const Dashboard = () => {
         {/* Header */}
         <div className="space-y-2">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Welcome to DeFi Super-App
+            Welcome to HOOD DeFi
           </h1>
           <p className="text-muted-foreground">
             Manage your multi-chain portfolio, trade tokens, and earn rewards

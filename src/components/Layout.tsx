@@ -21,7 +21,7 @@ export const Layout = ({ children }: LayoutProps) => {
         setUser(session?.user ?? null);
         
         if (!session) {
-          navigate("/auth");
+          navigate("/");
         }
       }
     );
@@ -31,7 +31,7 @@ export const Layout = ({ children }: LayoutProps) => {
       setUser(session?.user ?? null);
       
       if (!session) {
-        navigate("/auth");
+        navigate("/");
       }
     });
 

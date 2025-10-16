@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const menuItems = [
-  { title: "Dashboard", url: "/", icon: Home },
+  { title: "Dashboard", url: "/dashboard", icon: Home },
   { title: "Wallet", url: "/wallet", icon: Wallet },
   { title: "Portfolio", url: "/portfolio", icon: TrendingUp },
   { title: "Exchange", url: "/exchange", icon: Repeat },
@@ -36,7 +36,7 @@ export const Sidebar = () => {
     <SidebarRoot className="border-r border-border/50 bg-sidebar/95 backdrop-blur-xl">
       <div className="p-4 flex items-center justify-between border-b border-border/50">
         <h2 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          DeFi Super-App
+          HOOD DeFi
         </h2>
         <SidebarTrigger />
       </div>

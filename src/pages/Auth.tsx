@@ -28,7 +28,7 @@ const Auth = () => {
         });
         if (error) throw error;
         toast({ title: "Welcome back!", description: "Successfully logged in." });
-        navigate("/");
+        navigate("/dashboard");
       } else {
         const { error } = await supabase.auth.signUp({
           email,
@@ -40,9 +40,9 @@ const Auth = () => {
         if (error) throw error;
         toast({
           title: "Account created!",
-          description: "Welcome to DeFi Super-App. You can now access your wallet.",
+          description: "Welcome to HOOD DeFi. You can now access your wallet.",
         });
-        navigate("/");
+        navigate("/dashboard");
       }
     } catch (error: any) {
       toast({
@@ -67,7 +67,7 @@ const Auth = () => {
             <Wallet className="w-8 h-8 text-primary-foreground" />
           </div>
           <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            DeFi Super-App
+            HOOD DeFi
           </CardTitle>
           <CardDescription className="flex items-center justify-center gap-2">
             <Coins className="w-4 h-4" />
