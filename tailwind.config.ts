@@ -31,6 +31,10 @@ export default {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -57,6 +61,17 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-success': 'var(--gradient-success)',
+      },
+      boxShadow: {
+        'glow-primary': '0 0 20px hsl(var(--glow-primary))',
+        'glow-accent': '0 0 20px hsl(var(--glow-accent))',
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
       },
       borderRadius: {
         lg: "var(--radius)",
