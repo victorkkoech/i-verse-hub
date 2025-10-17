@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
-import { Wallet, TrendingUp, Coins, Shield, Zap, Users, ArrowRight, Gamepad2 } from "lucide-react";
+import { Wallet, TrendingUp, Coins, Shield, Zap, Users, ArrowRight, Gamepad2, Mail, MapPin, Phone, CheckCircle, Lock, Smartphone } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 const Landing = () => {
   const navigate = useNavigate();
+  const [contactForm, setContactForm] = useState({ name: "", email: "", message: "" });
 
   const features = [
     {
@@ -140,6 +144,213 @@ const Landing = () => {
                 </CardHeader>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                About HOOD DeFi
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                HOOD DeFi is revolutionizing the way users interact with decentralized finance. We've built a comprehensive platform that removes the complexity from crypto while maintaining the security and power of blockchain technology.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Our mission is to democratize access to DeFi by providing an intuitive, feature-rich platform that serves both beginners and advanced users. From multi-chain wallet management to AI-powered portfolio insights and blockchain gaming, we're creating the future of finance.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6">
+                <div className="space-y-2">
+                  <CheckCircle className="w-8 h-8 text-success" />
+                  <h4 className="font-semibold">Trusted</h4>
+                  <p className="text-sm text-muted-foreground">Bank-level security standards</p>
+                </div>
+                <div className="space-y-2">
+                  <Smartphone className="w-8 h-8 text-accent" />
+                  <h4 className="font-semibold">Accessible</h4>
+                  <p className="text-sm text-muted-foreground">Easy-to-use interface</p>
+                </div>
+                <div className="space-y-2">
+                  <Lock className="w-8 h-8 text-primary" />
+                  <h4 className="font-semibold">Secure</h4>
+                  <p className="text-sm text-muted-foreground">Your keys, your crypto</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              <Card className="border-border/50 backdrop-blur-xl bg-card/80 shadow-glow-primary">
+                <CardContent className="p-8 space-y-6">
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center shadow-lg">
+                        <Wallet className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h5 className="font-semibold mb-1">Multi-Chain Support</h5>
+                        <p className="text-sm text-muted-foreground">Seamlessly manage assets across Ethereum, BSC, and TRON networks</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-accent to-blue-600 flex items-center justify-center shadow-lg">
+                        <TrendingUp className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h5 className="font-semibold mb-1">AI-Powered Insights</h5>
+                        <p className="text-sm text-muted-foreground">Get intelligent recommendations to optimize your portfolio</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-success to-green-600 flex items-center justify-center shadow-lg">
+                        <Gamepad2 className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h5 className="font-semibold mb-1">Earn While Playing</h5>
+                        <p className="text-sm text-muted-foreground">Turn gaming into earning with blockchain-powered rewards</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center space-y-4 mb-16">
+            <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              How It Works
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Get started with HOOD DeFi in three simple steps
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="relative">
+              <div className="text-center space-y-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center text-2xl font-bold shadow-glow-primary">
+                  1
+                </div>
+                <h4 className="text-xl font-bold">Create Account</h4>
+                <p className="text-muted-foreground">Sign up with your email and secure your account with our advanced encryption</p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="text-center space-y-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-gradient-accent flex items-center justify-center text-2xl font-bold shadow-glow-accent">
+                  2
+                </div>
+                <h4 className="text-xl font-bold">Set Up Wallet</h4>
+                <p className="text-muted-foreground">Create or import your multi-chain wallet to manage ETH, BSC, and TRON assets</p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="text-center space-y-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-gradient-success flex items-center justify-center text-2xl font-bold">
+                  3
+                </div>
+                <h4 className="text-xl font-bold">Start Trading & Earning</h4>
+                <p className="text-muted-foreground">Swap tokens, track your portfolio, and earn rewards through our gaming platform</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 bg-secondary/30">
+        <div className="container mx-auto">
+          <div className="text-center space-y-4 mb-16">
+            <h3 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Get In Touch
+            </h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="space-y-8">
+              <Card className="border-border/50 backdrop-blur-xl bg-card/80 shadow-glass">
+                <CardContent className="p-6 space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center shadow-lg">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-1">Email</h5>
+                      <p className="text-sm text-muted-foreground">support@hooddefi.com</p>
+                      <p className="text-sm text-muted-foreground">partnerships@hooddefi.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-accent flex items-center justify-center shadow-lg">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-1">Office</h5>
+                      <p className="text-sm text-muted-foreground">123 Blockchain Avenue</p>
+                      <p className="text-sm text-muted-foreground">Crypto City, CC 12345</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-success flex items-center justify-center shadow-lg">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h5 className="font-semibold mb-1">Phone</h5>
+                      <p className="text-sm text-muted-foreground">+1 (555) 123-4567</p>
+                      <p className="text-sm text-muted-foreground">Mon-Fri 9am-6pm EST</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="border-border/50 backdrop-blur-xl bg-card/80 shadow-glass">
+              <CardHeader>
+                <CardTitle>Send Us a Message</CardTitle>
+                <CardDescription>Fill out the form below and we'll get back to you shortly</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Name</label>
+                  <Input
+                    placeholder="Your name"
+                    value={contactForm.name}
+                    onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Email</label>
+                  <Input
+                    type="email"
+                    placeholder="your@email.com"
+                    value={contactForm.email}
+                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">Message</label>
+                  <Textarea
+                    placeholder="Tell us how we can help..."
+                    rows={5}
+                    value={contactForm.message}
+                    onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                  />
+                </div>
+                <Button className="w-full bg-gradient-primary hover:opacity-90 shadow-glow-primary">
+                  Send Message
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
