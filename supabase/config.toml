@@ -1,1 +1,13 @@
 project_id = "eqxnnuhcffshyrarsmhn"
+
+[functions.create-wallet]
+verify_jwt = true
+
+[functions.ai-portfolio-analysis]
+verify_jwt = true
+
+[functions.ai-token-insights]
+verify_jwt = true
+
+[functions.send-transaction]
+verify_jwt = true
